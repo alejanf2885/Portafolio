@@ -1,0 +1,97 @@
+@use 'variables' as *;
+
+.about {
+  background-color: $color-principal;
+  font-family: $font-family-prime;
+
+  .container {
+    width: $about-container-width;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: $about-padding-top;
+
+    .col-1,
+    .col-2 {
+      flex: 1 1 45%;
+      margin: $about-col-margin;
+      position: relative;
+    }
+
+    .col-1 {
+      h2 {
+        font-size: $about-h2-font-size;
+        color: $color-secundario;
+        font-weight: 700;
+        margin-bottom: $about-h2-margin-bottom;
+      }
+      span {
+        font-size: $about-span-font-size;
+        color: $color-secundario;
+        font-weight: 700;
+        margin-bottom: $about-span-margin-bottom;
+      }
+    }
+
+    .col-2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: $border-radius-circle;
+
+      #starCanvas {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: $border-radius-circle;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+        border-radius: $border-radius-circle;
+        z-index: 1;
+        max-width: 80%;
+        max-height: 80%;
+      }
+    }
+  }
+
+  @media (max-width: breakpoint('medium')) {
+    flex-direction: column;
+    align-items: center;
+
+    .col-1, .col-2 {
+      flex: 1 1 100%;
+      margin: $padding-small;
+    }
+
+    .col-1 {
+      h2 {
+        font-size: $font-size-medium; /* Ajustar tamaño de fuente */
+      }
+      span {
+        font-size: $font-size-small; /* Ajustar tamaño de fuente */
+      }
+    }
+
+    .col-2 {
+      width: 300px;
+      height: 300px;
+    }
+  }
+
+  @media (max-width: breakpoint('small')) {
+    .col-1 {
+      h2 {
+        font-size: $font-size-small; /* Ajustar tamaño de fuente */
+      }
+      span {
+        font-size: $font-size-xsmall; /* Ajustar tamaño de fuente */
+      }
+    }
+  }
+}

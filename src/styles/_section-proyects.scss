@@ -1,0 +1,45 @@
+@use './variables' as *;
+@use 'components/card-proyect' as card;
+
+.proyects {
+    width: 100%;
+    text-align: center;
+    font-family: $font-family-prime;
+
+    .image-container {
+        width: 100%;
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+    }
+
+    h2 {
+        padding-top: 2rem;
+        color: $color-secundario;
+        background-color: $color-principal;
+        text-align: center;
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    .content {
+        background-color: $color-principal;
+        color: $color-principal2;
+        padding: 2rem 0;
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 0rem;
+            justify-items: center;
+
+            .card {
+                @include card.card-styles;
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    }
+}

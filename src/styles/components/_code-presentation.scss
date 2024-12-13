@@ -1,0 +1,54 @@
+@use '../variables' as *;
+
+@mixin code {
+  display: flex;
+  background-color: $color-background;
+  padding: $code-padding-large;
+  border-radius: $code-border-radius;
+  overflow-x: auto;
+  box-shadow: $code-box-shadow;
+  font-size: $code-font-size-large;
+  font-family: $font-family-prime;
+  border: $border-width $border-style $border-color-transparent;
+
+  @media (max-width: breakpoint('xlarge')) {
+    font-size: $code-font-size-large;
+    padding: $code-padding-medium $code-padding-responsive 28px $code-padding-medium;
+  }
+
+  @media (max-width: breakpoint('medium')) {
+    font-size: $code-font-size-medium;
+    padding: $code-padding-small;
+  }
+
+  @media (max-width: breakpoint('small')) {
+    font-size: $code-font-size-medium;
+    padding: $code-padding-xsmall;
+  }
+
+  .line-numbers {
+    text-align: right;
+    padding-right: $padding-medium;
+    border-right: 1px solid $color-border-line;
+    margin-right: $padding-medium;
+    color: $color-line-numbers;
+    user-select: none;
+  }
+
+  .code-content {
+    color: $color-code-text;
+
+    span.keyword {
+      color: $color-keyword;
+    }
+
+    span.string {
+      color: $color-string;
+    }
+
+    span.comment {
+      color: $color-comment;
+      font-style: italic;
+    }
+  }
+}

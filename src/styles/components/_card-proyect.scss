@@ -1,0 +1,62 @@
+@use '../variables' as *;
+
+@mixin card-styles {
+  background-color: rgba(27, 27, 27, 0.8);
+  border: 6px solid rgba(111, 105, 100, 0.8);
+  border-radius: $border-radius;
+  padding: $padding-large;
+  width: 250px;
+  color: $color-principal2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  font-family: $font-family-prime;
+
+  h3 {
+    color: $color-secundario;
+    font-size: $font-size-large;
+    margin: 0 0 10px 0;
+    text-align: start;
+  }
+
+  p {
+    margin: 0 0 20px 0;
+    font-size: $font-size-xsmall;
+    color: $color-text-secondary;
+    text-align: start;
+  }
+
+  .commits-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: auto;
+
+    span {
+      display: flex;
+      align-items: center;
+
+      i {
+        margin-right: 10px;
+        font-size: 1.4em;
+      }
+    }
+
+    .repo-link {
+      display: flex;
+      align-items: center;
+      font-size: 1.4em;
+      color: inherit;
+      text-decoration: none;
+      transition: transform 0.5s;
+      transform-origin: center;
+
+      &:hover {
+        transform: scale(1.3);
+      }
+    }
+  }
+}
