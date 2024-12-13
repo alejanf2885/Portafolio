@@ -52,5 +52,5 @@ Enlace a figma: [Figma](https://www.figma.com/design/Gzp0529CwJ2Gs0jcjmf8LB/Port
 
 ## GITHUB PAGES
 
-Enlace a github pages:  [Github Pages]()
+Enlace a github pages:  [Github Pages](https://alejanf2885.github.io/Portafolio/)
 
